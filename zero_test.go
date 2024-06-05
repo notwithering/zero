@@ -59,17 +59,6 @@ func TestPointerZero(t *testing.T) {
 	}
 }
 
-func TestPointerRand(t *testing.T) {
-	for _, tc := range testCases {
-		og := tc
-		PointerRand(&tc)
-		mem := memory(&tc)
-		if og == tc {
-			t.Errorf("PointerRand(%t) -> %s", tc, mem)
-		}
-	}
-}
-
 func memory(data interface{}) []byte {
 	v := reflect.ValueOf(data).Elem()
 	ptr := unsafe.Pointer(uintptr(v.Addr().UnsafePointer()))

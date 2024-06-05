@@ -2,7 +2,6 @@
 package zero
 
 import (
-	"crypto/rand"
 	"reflect"
 	"unsafe"
 )
@@ -27,22 +26,5 @@ func PointerZero(data interface{}) {
 
 	for i := uintptr(0); i < size; i++ {
 		*(*byte)(unsafe.Pointer(uintptr(ptr) + i)) = 0
-	}
-}
-
-// Randomizes the bytes in data.
-func PointerRand(data interface{}) {
-	v := reflect.ValueOf(data).Elem()
-	size := v.Type().Size()
-	ptr := unsafe.Pointer(uintptr(v.Addr().UnsafePointer()))
-
-	randomBytes := make([]byte, size)
-	_, err := rand.Read(randomBytes)
-	if err != nil {
-		panic(err)
-	}
-
-	for i := uintptr(0); i < size; i++ {
-		*(*byte)(unsafe.Pointer(uintptr(ptr) + i)) = randomBytes[i]
 	}
 }
