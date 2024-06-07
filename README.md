@@ -1,5 +1,5 @@
 # 🔁 MIGRATED 🔁
-# This has been changed into a more broad repo [here])(https://github.com/notwithering/memory)
+# This has been changed into a more broad repo [here](https://github.com/notwithering/memory)
 
 # Zero
 
