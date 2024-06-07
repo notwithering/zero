@@ -1,3 +1,6 @@
+# 🔁 MIGRATED 🔁
+# This has been changed into a more broad repo [here])(https://github.com/notwithering/memory)
+
 # Zero
 
 [![MIT License](https://img.shields.io/badge/License-MIT-a10b31)](LICENSE)
